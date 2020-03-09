@@ -2,4 +2,14 @@
 <string name="app_name">FitFood</string>
     <string name="comidas">Comidas</string>
     <string name="receitas">Receitas</string>
+    <string name="menu_receita_pre_treino">Pré Treino</string>
+    <string name="menu_receita_pos_treino">Pós Treino</string>
+    <string name="menu_receita_almoco">Almoço</string>
+    <string name="menu_receita_janta">Janta</string>
+    <string name="menu_receita_cafe">Café da manhã</string>
+    <string name="menu_receita_lanche">Lanche</string>
+    <string name="receita_bar_title">RECEITAS</string>
+
+    <string name="navigation_drawer_open">Open navigation Drawer</string>
+    <string name="navigation_drawer_close">Close navigation Drawer</string>
 </resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIN="navigatino_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_receita_pre_treino"
+            android:title="@string/menu_receita_pre_treino" />
+        <item
+            android:id="@+id/nav_receita_pos_treino"
+            android:title="@string/menu_receita_pos_treino" />
+        <item
+            android:id="@+id/nav_receita_almoco"
+            android:title="@string/menu_receita_almoco" />
+        <item
+            android:id="@+id/nav_receita_janta"
+            android:title="@string/menu_receita_janta" />
+        <item
+            android:id="@+id/nav_receita_cafe"
+            android:title="@string/menu_receita_cafe" />
+        <item
+            android:id="@+id/nav_receita_lanche"
+            android:title="@string/menu_receita_lanche" />
+
+    </group>
+
+</menu>

@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //Instanciando a classe ViewHolder
     private final ViewHolder mViewHolder = new ViewHolder();
     //Animação no clique do botão
