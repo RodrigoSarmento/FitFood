@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FitFood</string>
+    <string name="comidas">Food</string>
+    <string name="receitas">Recipes</string>
+</resources>

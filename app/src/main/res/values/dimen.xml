@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_margin_top">@dimen/_30sdp</dimen>
+    <dimen name="main_button_size">@dimen/_170sdp</dimen>
+    <dimen name="main_button_text_size">@dimen/_20ssp</dimen>
+</resources>
