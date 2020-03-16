@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/receita_imageView"
-            android:src="@drawable/abc_vector_test"
+            android:src="@drawable/batata_doce"
             android:layout_gravity="center"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_100sdp"/>
