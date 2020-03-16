@@ -31,6 +31,19 @@
 
     </LinearLayout>
 
+    <GridView
+        android:id="@+id/grid_view_receita_pre_treino"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:layout_margin="@dimen/_8sdp"
+        android:horizontalSpacing="@dimen/_6sdp"
+        android:verticalSpacing="@dimen/_6sdp"
+        />
+
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_receita"
         android:layout_width="wrap_content"
