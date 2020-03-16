@@ -16,6 +16,8 @@ public class ReceitaFragmentAlmoco extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_receita_almoco,container, false);
+        View view = inflater.inflate(R.layout.fragment_receita_almoco, container, false);
+
+        return view;
     }
 }
