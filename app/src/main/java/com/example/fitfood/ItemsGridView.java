@@ -1,6 +1,8 @@
 package com.example.fitfood;
 
-public class ItemsGridView {
+import java.io.Serializable;
+
+public class ItemsGridView implements Serializable {
 
     private String name;
     private String desc;

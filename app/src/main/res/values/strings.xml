@@ -1,5 +1,5 @@
 <resources>
-<string name="app_name">FitFood</string>
+    <string name="app_name">FitFood</string>
     <string name="comidas">Comidas</string>
     <string name="receitas">Receitas</string>
     <string name="menu_receita_pre_treino">Pré Treino</string>
