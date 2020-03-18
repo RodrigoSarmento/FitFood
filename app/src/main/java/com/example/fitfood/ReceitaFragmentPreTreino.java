@@ -25,6 +25,7 @@ public class ReceitaFragmentPreTreino extends Fragment {
     int[] images = {R.drawable.batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
     String[] names = {"Batata Doce", "Brownie de Banana", "Crepioca de Requeijão", "Panqueca de Banana"};
     String[] desc = {"batata doce", "brownie", "crepioca", "panqueca"};
+    String[] ingredientes = {"1 batata doce", "pó de chocolate e banana", "requeijao e n sei mais o q", "banana e ovo eu acho, sei n"};
     GridView gridView;
     List<ItemsGridView> itemsList = new ArrayList<>();
     CustomAdapter customAdapter;
@@ -44,7 +45,7 @@ public class ReceitaFragmentPreTreino extends Fragment {
         gridView = view.findViewById(R.id.grid_view_receita_pre_treino);
 
         for (int i = 0; i < names.length; i++) {
-            ItemsGridView itemsGridView = new ItemsGridView(names[i], desc[i], images[i]);
+            ItemsGridView itemsGridView = new ItemsGridView(names[i], desc[i], ingredientes[i], images[i]);
             itemsList.add(itemsGridView);
         }
         customAdapter = new CustomAdapter(itemsList, getContext(), getActivity());
