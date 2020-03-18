@@ -18,5 +18,6 @@ public class ReceitaFragmentCafe extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_receita_cafe, container, false);
 
-        return view;    }
+        return view;
+    }
 }

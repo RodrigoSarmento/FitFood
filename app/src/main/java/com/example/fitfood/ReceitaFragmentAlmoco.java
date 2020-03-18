@@ -69,6 +69,7 @@ public class ReceitaFragmentAlmoco extends Fragment {
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.menu_search_bar, menu);
         MenuItem menuItem = menu.findItem(R.id.search_view);
+
         SearchView searchView = (SearchView) menuItem.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -131,11 +132,9 @@ public class ReceitaFragmentAlmoco extends Fragment {
             View view = inflater.inflate(R.layout.item_grid, null);
             ImageView imageView = view.findViewById(R.id.receita_imageView);
             TextView textView_Name = view.findViewById(R.id.receita_textView_Name);
-            TextView textView_Desc = view.findViewById(R.id.receita_textView_Desc);
 
             imageView.setImageResource(itemsGridViewsFiltered.get(position).getImage());
             textView_Name.setText(itemsGridViewsFiltered.get(position).getName());
-            textView_Desc.setText(itemsGridViewsFiltered.get(position).getDesc());
 
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
