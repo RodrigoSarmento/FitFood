@@ -5,18 +5,15 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
-
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-
-import com.example.fitfood.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class ReceitaActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +33,7 @@ public class ReceitaActivity extends AppCompatActivity implements NavigationView
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.colorWhite));
         drawer.addDrawerListener(toggle);
-        drawer.openDrawer(Gravity.START);
+        drawer.openDrawer(GravityCompat.START);
         toggle.syncState();//rotate de hamburger icon
 
         NavigationView navigationView = findViewById(R.id.nav_receita);//Looking the Navigation view we created in activity_receita
@@ -98,4 +95,5 @@ public class ReceitaActivity extends AppCompatActivity implements NavigationView
             super.onBackPressed();
         }
     }
+
 }
