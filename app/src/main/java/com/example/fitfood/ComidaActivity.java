@@ -59,27 +59,27 @@ public class ComidaActivity extends AppCompatActivity implements NavigationView.
 
             case R.id.nav_comida_cafe:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
-                        new ReceitaFragmentCafe()).commit();
+                        new ComidaFragmentCafe()).commit();
                 break;
 
             case R.id.nav_comida_janta:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
-                        new ReceitaFragmentJanta()).commit();
+                        new ComidaFragmentJanta()).commit();
                 break;
 
             case R.id.nav_comida_lanche:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
-                        new ReceitaFragmentLanche()).commit();
+                        new ComidaFragmentLanche()).commit();
                 break;
 
             case R.id.nav_comida_pos_treino:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
-                        new ReceitaFragmentPosTreino()).commit();
+                        new ComidaFragmentPosTreino()).commit();
                 break;
 
             case R.id.nav_comida_pre_treino: //If this case is true, we want to open our fragment
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
-                        new ReceitaFragmentPreTreino()).commit(); //Name of the fragment Class
+                        new ComidaFragmentPreTreino()).commit(); //Name of the fragment Class
                 break;
 
         }
