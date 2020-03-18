@@ -17,7 +17,7 @@ public class ItemViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item_view);
+        setContentView(R.layout.detalhes_item_layout);
 
         imageView = findViewById(R.id.image_view_item);
         textView = findViewById(R.id.text_view_name_item);
