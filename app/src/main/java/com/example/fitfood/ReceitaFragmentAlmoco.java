@@ -60,7 +60,6 @@ public class ReceitaFragmentAlmoco extends Fragment {
         // FIM DAS PARADAS DO GRIDVIEW
 
 
-
         return view;
 
     }
@@ -92,7 +91,7 @@ public class ReceitaFragmentAlmoco extends Fragment {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.search_view){
+        if (id == R.id.search_view) {
             return true;
         }
 
@@ -139,7 +138,7 @@ public class ReceitaFragmentAlmoco extends Fragment {
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(new Intent( getActivity(), ItemViewActivity.class).putExtra("item", itemsGridViewsFiltered.get(position)));
+                    startActivity(new Intent(getActivity(), ItemViewActivity.class).putExtra("item", itemsGridViewsFiltered.get(position)));
                 }
             });
 
@@ -154,15 +153,15 @@ public class ReceitaFragmentAlmoco extends Fragment {
 
                     FilterResults filterResults = new FilterResults();
 
-                    if(constraint == null || constraint.length() == 0){
+                    if (constraint == null || constraint.length() == 0) {
                         filterResults.count = itemsList.size();
                         filterResults.values = itemsList;
-                    }else{
+                    } else {
                         String searchStr = constraint.toString().toLowerCase();
                         List<ItemsGridView> resultData = new ArrayList<>();
 
-                        for(ItemsGridView itemsGridView : itemsList){
-                            if(itemsGridView.getName().contains(searchStr) || itemsGridView.getDesc().contains(searchStr)){
+                        for (ItemsGridView itemsGridView : itemsList) {
+                            if (itemsGridView.getName().contains(searchStr) || itemsGridView.getDesc().contains(searchStr)) {
                                 resultData.add(itemsGridView);
                             }
                             filterResults.count = resultData.size();
