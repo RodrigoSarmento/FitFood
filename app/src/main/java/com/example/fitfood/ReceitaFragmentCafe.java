@@ -1,8 +1,6 @@
 package com.example.fitfood;
 
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -10,19 +8,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.SearchView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,7 +47,7 @@ public class ReceitaFragmentCafe extends Fragment {
             ItemsGridView itemsGridView = new ItemsGridView(names[i], desc[i], images[i]);
             itemsList.add(itemsGridView);
         }
-        customAdapter = new CustomAdapter(itemsList, getContext());
+        customAdapter = new CustomAdapter(itemsList, getContext(), getActivity());
         gridView.setAdapter(customAdapter);
         // FIM DAS PARADAS DO GRIDVIEW
 
@@ -98,87 +90,4 @@ public class ReceitaFragmentCafe extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
-    public class CustomAdapter extends BaseAdapter implements Filterable {
-        private List<ItemsGridView> itemsGridViews;
-        private List<ItemsGridView> itemsGridViewsFiltered;
-        private Context context;
-
-        public CustomAdapter(List<ItemsGridView> itemsGridViews, Context context) {
-            this.itemsGridViews = itemsGridViews;
-            this.itemsGridViewsFiltered = itemsGridViews;
-            this.context = getContext();
-        }
-
-        @Override
-        public int getCount() {
-            return itemsGridViewsFiltered.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public View getView(final int position, View convertView, ViewGroup parent) {
-            LayoutInflater inflater = LayoutInflater.from(getContext());
-
-            View view = inflater.inflate(R.layout.item_grid, null);
-            ImageView imageView = view.findViewById(R.id.receita_imageView);
-            TextView textView_Name = view.findViewById(R.id.receita_textView_Name);
-
-            imageView.setImageResource(itemsGridViewsFiltered.get(position).getImage());
-            textView_Name.setText(itemsGridViewsFiltered.get(position).getName());
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(getActivity(), ItemViewActivity.class).putExtra("item", itemsGridViewsFiltered.get(position)));
-                }
-            });
-
-            return view;
-        }
-
-        @Override
-        public Filter getFilter() {
-            final Filter filter = new Filter() {
-                @Override
-                protected FilterResults performFiltering(CharSequence constraint) {
-
-                    FilterResults filterResults = new FilterResults();
-
-                    if (constraint == null || constraint.length() == 0) {
-                        filterResults.count = itemsList.size();
-                        filterResults.values = itemsList;
-                    } else {
-                        String searchStr = constraint.toString().toLowerCase();
-                        List<ItemsGridView> resultData = new ArrayList<>();
-
-                        for (ItemsGridView itemsGridView : itemsList) {
-                            if (itemsGridView.getName().contains(searchStr) || itemsGridView.getDesc().contains(searchStr)) {
-                                resultData.add(itemsGridView);
-                            }
-                            filterResults.count = resultData.size();
-                            filterResults.values = resultData;
-                        }
-                    }
-                    return filterResults;
-                }
-
-                @Override
-                protected void publishResults(CharSequence constraint, FilterResults results) {
-                    itemsGridViewsFiltered = (List<ItemsGridView>) results.values;
-                    notifyDataSetChanged();
-                }
-            };
-
-            return filter;
-        }
-    }
 }
