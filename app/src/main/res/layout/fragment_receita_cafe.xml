@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <GridView
+        android:id="@+id/grid_view_receita_cafe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:horizontalSpacing="@dimen/_6sdp"
+        android:verticalSpacing="@dimen/_6sdp"
+        />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="144dp"
-            android:layout_marginEnd="101dp"
-            android:text="QUERO CAFÉEEEEEEEEE"
-            android:textSize="@dimen/main_button_text_size"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="144dp" />
-
-    </RelativeLayout>
-
-</ScrollView>
+</LinearLayout>
