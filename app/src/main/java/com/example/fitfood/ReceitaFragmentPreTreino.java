@@ -18,6 +18,7 @@ public class ReceitaFragmentPreTreino extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_receita_pre_treino,container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_receita_pre_treino, container, false);
+
+        return view;    }
 }
