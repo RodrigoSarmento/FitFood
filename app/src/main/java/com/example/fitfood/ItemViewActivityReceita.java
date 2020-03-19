@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ItemViewActivityReceita extends AppCompatActivity  {
 
-    ImageView image_comida;
+    ImageView image;
     TextView textView;
     TextView textViewIngredientes;
 
@@ -21,14 +21,14 @@ public class ItemViewActivityReceita extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detalhe_item_layout_receita);
 
-        image_comida = findViewById(R.id.image_detalhe_receita);
+        image = findViewById(R.id.image_detalhe_receita);
         textView = findViewById(R.id.titulo_detalhe_receita);
         textViewIngredientes = findViewById(R.id.ingredientes_detalhe_receita);
         Intent intent = getIntent();
 
         if (intent.getExtras() != null) {
             itemsGridViewReceita = (ItemsGridViewReceita) intent.getSerializableExtra("item");
-            image_comida.setImageResource(itemsGridViewReceita.getImage());
+            image.setImageResource(itemsGridViewReceita.getImage());
             textView.setText(itemsGridViewReceita.getName());
             textViewIngredientes.setText(itemsGridViewReceita.getIngredientes());
         }

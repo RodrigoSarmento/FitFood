@@ -7,10 +7,10 @@
 
     <ImageView
         android:id="@+id/image_detalhe_receita"
-        android:layout_width="@dimen/_250sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="@dimen/image_detalhe_largura"
+        android:layout_height="@dimen/image_detalhe_altura"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/margin_top_fragment"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -18,10 +18,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image_detalhe_receita"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
 
     <TextView
         android:id="@+id/ingredientes_text"
@@ -31,9 +30,8 @@
         android:layout_centerHorizontal="true"
         android:text="@string/ingredientes"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp" />
-
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
 
     <TextView
         android:id="@+id/ingredientes_detalhe_receita"
@@ -41,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ingredientes_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp" />
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
 
 </RelativeLayout>

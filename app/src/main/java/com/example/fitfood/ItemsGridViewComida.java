@@ -10,7 +10,7 @@ public class ItemsGridViewComida implements Serializable {
     private int image_info;
     private int image_comida;
 
-    public ItemsGridViewComida(String name, String desc, String ingredientes, int image_comida ,int image_info) {
+    public ItemsGridViewComida(String name, String desc, String ingredientes, int image_comida, int image_info) {
         this.name = name;
         this.desc = desc;
         this.ingredientes = ingredientes;
@@ -42,13 +42,17 @@ public class ItemsGridViewComida implements Serializable {
         this.ingredientes = ingredientes;
     }
 
-    public int getImageComida() {return image_comida;}
+    public int getImageComida() {
+        return image_comida;
+    }
 
     public void setImageComida(int image_comida) {
         this.image_comida = image_comida;
     }
 
-    public int getImageInfo() {return image_info;}
+    public int getImageInfo() {
+        return image_info;
+    }
 
     public void setImageInfo(int image_info) {
         this.image_info = image_info;

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
 
     <GridView
         android:id="@+id/grid_view_comida_cafe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_grid"
+        android:horizontalSpacing="@dimen/horizontal_grid_space"
         android:numColumns="2"
-        android:layout_marginTop="@dimen/margin_top_fragment"
-        android:horizontalSpacing="@dimen/_6sdp"
-        android:verticalSpacing="@dimen/_6sdp"
-        />
+        android:verticalSpacing="@dimen/vertical_grid_space" />
 
 </LinearLayout>

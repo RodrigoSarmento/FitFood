@@ -10,7 +10,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.animation.AlphaAnimation;
-import android.widget.Button;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -20,7 +19,7 @@ public class ComidaActivity extends AppCompatActivity implements NavigationView.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comida);
+        setContentView(R.layout.activity_comida); //Openning layout
 
         //Set Action Bar
         Toolbar toolbar = findViewById(R.id.toolbar_comida);

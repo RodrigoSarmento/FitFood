@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:foregroundGravity="center_horizontal"
-        android:layout_margin="@dimen/_8sdp"
+        android:layout_margin="@dimen/margin_info"
         tools:ignore="ContentDescription" />
 
 </LinearLayout>

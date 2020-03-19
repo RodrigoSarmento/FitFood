@@ -7,21 +7,21 @@
 
     <Button
         android:id="@+id/button_info_comida"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/button_info_size"
+        android:layout_height="@dimen/button_info_size"
         android:layout_alignParentEnd="true"
         android:layout_gravity="end"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/margin_button_info"
+        android:layout_marginEnd="@dimen/margin_button_info"
         android:background="@drawable/ic_info_blue" />
 
     <ImageView
         android:id="@+id/image_detalhe_comida"
-        android:layout_width="@dimen/_250sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="@dimen/image_detalhe_largura"
+        android:layout_height="@dimen/image_detalhe_altura"
         android:layout_below="@+id/button_info_comida"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/margin_top_fragment"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -30,8 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/image_detalhe_comida"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp" />
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
 
     <TextView
         android:id="@+id/ingredientes_text"
@@ -41,8 +41,8 @@
         android:layout_centerHorizontal="true"
         android:text="@string/ingredientes"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp" />
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
 
     <TextView
         android:id="@+id/ingredientes_detalhe_comida"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ingredientes_text"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:textSize="@dimen/_15ssp" />
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
 
 </RelativeLayout>

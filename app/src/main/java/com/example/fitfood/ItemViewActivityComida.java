@@ -39,7 +39,6 @@ public class ItemViewActivityComida extends AppCompatActivity implements View.On
         if (intent.getExtras() != null) {
             itemsGridViewComida = (ItemsGridViewComida) intent.getSerializableExtra("item");
             image_comida.setImageResource(itemsGridViewComida.getImageComida());
-            image_info.setImageResource(itemsGridViewComida.getImageInfo());
             textView.setText(itemsGridViewComida.getName());
             textViewIngredientes.setText(itemsGridViewComida.getIngredientes());
         }

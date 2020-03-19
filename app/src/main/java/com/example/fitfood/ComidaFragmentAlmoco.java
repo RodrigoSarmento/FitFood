@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.widget.GridView;
 import android.widget.SearchView;
 
@@ -23,39 +24,36 @@ public class ComidaFragmentAlmoco extends Fragment {
 
     // VARIÁVEIS PARA O GRIDVIEW
     int[] images_comida = {R.drawable.batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
-    int[] images_info = {R.drawable.batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
+    int[] images_info = {R.drawable.info_comida_batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
     String[] names = {"Batata Doce", "Brownie de Banana", "Crepioca de Requeijão", "Panqueca de Banana"};
     String[] desc = {"batata doce", "brownie", "crepioca", "panqueca"};
-    String[] ingrediente = {};
+    String[] ingredientes = {"1 batata doce", "pó de chocolate e banana", "requeijao e n sei mais o q", "banana e ovo eu acho, sei n"};
     GridView gridView;
     List<ItemsGridViewComida> itemsList = new ArrayList<>();
     CustomAdapterComida customAdapterComida;
+    // FIM VARIÁVEIS PARA O GRIDVIEW
 
     public ComidaFragmentAlmoco() {
         setHasOptionsMenu(true);
     }
 
-    // FIM VARIÁVEIS PARA O GRIDVIEW
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_comida_almoco, container, false);
 
-        // PARADAS DO GRIDVIEW
+        //finding grid view
         gridView = view.findViewById(R.id.grid_view_comida_almoco);
-
+        //Adding all itens in the gridview list
         for (int i = 0; i < names.length; i++) {
-            ItemsGridViewComida itemsGridViewComida = new ItemsGridViewComida(names[i], desc[i], " ",images_comida[i], images_info[i]);
+            ItemsGridViewComida itemsGridViewComida = new ItemsGridViewComida(names[i], desc[i], ingredientes[i],images_comida[i], images_info[i]);
             itemsList.add(itemsGridViewComida);
         }
         customAdapterComida = new CustomAdapterComida(itemsList, getContext(), getActivity());
         gridView.setAdapter(customAdapterComida);
-        // FIM DAS PARADAS DO GRIDVIEW
-        //Set info button click
 
         return view;
-
     }
 
     @Override
@@ -88,7 +86,6 @@ public class ComidaFragmentAlmoco extends Fragment {
         if (id == R.id.search_view) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

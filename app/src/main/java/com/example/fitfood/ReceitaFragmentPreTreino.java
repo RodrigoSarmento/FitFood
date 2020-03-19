@@ -29,32 +29,29 @@ public class ReceitaFragmentPreTreino extends Fragment {
     GridView gridView;
     List<ItemsGridViewReceita> itemsList = new ArrayList<>();
     CustomAdapterReceita customAdapter;
+    // FIM VARIÁVEIS PARA O GRIDVIEW
 
     public ReceitaFragmentPreTreino() {
         setHasOptionsMenu(true);
     }
 
-    // FIM VARIÁVEIS PARA O GRIDVIEW
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_receita_pre_treino, container, false);
 
-        // PARADAS DO GRIDVIEW
+        //finding grid view
         gridView = view.findViewById(R.id.grid_view_receita_pre_treino);
-
+        //Adding all itens in the gridview list
         for (int i = 0; i < names.length; i++) {
             ItemsGridViewReceita itemsGridViewReceita = new ItemsGridViewReceita(names[i], desc[i], ingredientes[i], images[i]);
             itemsList.add(itemsGridViewReceita);
         }
         customAdapter = new CustomAdapterReceita(itemsList, getContext(), getActivity());
         gridView.setAdapter(customAdapter);
-        // FIM DAS PARADAS DO GRIDVIEW
-
 
         return view;
-
     }
 
     @Override
