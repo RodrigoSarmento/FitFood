@@ -27,8 +27,8 @@ public class ReceitaFragmentPreTreino extends Fragment {
     String[] desc = {"batata doce", "brownie", "crepioca", "panqueca"};
     String[] ingredientes = {"1 batata doce", "pó de chocolate e banana", "requeijao e n sei mais o q", "banana e ovo eu acho, sei n"};
     GridView gridView;
-    List<ItemsGridView> itemsList = new ArrayList<>();
-    CustomAdapter customAdapter;
+    List<ItemsGridViewReceita> itemsList = new ArrayList<>();
+    CustomAdapterReceita customAdapter;
 
     public ReceitaFragmentPreTreino() {
         setHasOptionsMenu(true);
@@ -45,10 +45,10 @@ public class ReceitaFragmentPreTreino extends Fragment {
         gridView = view.findViewById(R.id.grid_view_receita_pre_treino);
 
         for (int i = 0; i < names.length; i++) {
-            ItemsGridView itemsGridView = new ItemsGridView(names[i], desc[i], ingredientes[i], images[i]);
-            itemsList.add(itemsGridView);
+            ItemsGridViewReceita itemsGridViewReceita = new ItemsGridViewReceita(names[i], desc[i], ingredientes[i], images[i]);
+            itemsList.add(itemsGridViewReceita);
         }
-        customAdapter = new CustomAdapter(itemsList, getContext(), getActivity());
+        customAdapter = new CustomAdapterReceita(itemsList, getContext(), getActivity());
         gridView.setAdapter(customAdapter);
         // FIM DAS PARADAS DO GRIDVIEW
 

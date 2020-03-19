@@ -38,13 +38,13 @@ public class ComidaActivity extends AppCompatActivity implements NavigationView.
         drawer.openDrawer(GravityCompat.START);
         toggle.syncState();//rotate de hamburger icon
 
-        NavigationView navigationView = findViewById(R.id.nav_comida);//Looking the Navigation view we created in activity_receita
+        NavigationView navigationView = findViewById(R.id.nav_comida);//Looking the Navigation view we created in activity_comida
         navigationView.setNavigationItemSelectedListener(this);
 
         //First Fragment activity that will be shown at beggining
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
-                    new ReceitaFragmentPreTreino()).commit();
+                    new ComidaFragmentPreTreino()).commit();
             navigationView.setCheckedItem(R.id.nav_comida_pre_treino);
         }
     }

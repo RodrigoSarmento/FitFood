@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -11,14 +12,14 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/receita_imageView"
+            android:id="@+id/item_grid_image"
             android:src="@drawable/batata_doce"
             android:layout_gravity="center"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"/>
+            android:layout_height="@dimen/_100sdp"
+            tools:ignore="ContentDescription" />
         <TextView
-            android:id="@+id/receita_textView_Name"
-            android:text="Name"
+            android:id="@+id/item_grid_text"
             android:layout_marginTop="@dimen/_2sdp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"

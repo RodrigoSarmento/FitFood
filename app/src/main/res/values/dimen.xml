@@ -3,4 +3,6 @@
     <dimen name="main_margin_top">@dimen/_30sdp</dimen>
     <dimen name="main_button_size">@dimen/_170sdp</dimen>
     <dimen name="main_button_text_size">@dimen/_20ssp</dimen>
+    <dimen name="margin_top_fragment">@dimen/_50sdp</dimen>
+
 </resources>

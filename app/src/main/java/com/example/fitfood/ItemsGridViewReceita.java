@@ -2,14 +2,14 @@ package com.example.fitfood;
 
 import java.io.Serializable;
 
-public class ItemsGridView implements Serializable {
+public class ItemsGridViewReceita implements Serializable {
 
     private String name;
     private String desc;
     private String ingredientes;
     private int image;
 
-    public ItemsGridView(String name, String desc, String ingredientes, int image) {
+    public ItemsGridViewReceita(String name, String desc, String ingredientes, int image) {
         this.name = name;
         this.desc = desc;
         this.ingredientes = ingredientes;
