@@ -23,7 +23,7 @@ public class ReceitaFragmentPosTreino extends Fragment {
 
     // VARIÁVEIS PARA O GRIDVIEW
     int[] images = {R.drawable.batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
-    String[] names = {"Batata Doce pos", "Brownie de Banana pos", "Crepioca de Requeijão pos", "Panqueca de Banana pos"};
+    String[] names;
     String[] desc = {"batata doce", "brownie", "crepioca", "panqueca"};
     GridView gridView;
     List<ItemsGridView> itemsList = new ArrayList<>();
@@ -38,10 +38,11 @@ public class ReceitaFragmentPosTreino extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_receita_pre_treino, container, false);
+        names = getResources().getStringArray(R.array.recipes);
+        View view = inflater.inflate(R.layout.fragment_receita_pos_treino, container, false);
 
         // PARADAS DO GRIDVIEW
-        gridView = view.findViewById(R.id.grid_view_receita_pre_treino);
+        gridView = view.findViewById(R.id.grid_view_receita_pos_treino);
 
         for (int i = 0; i < names.length; i++) {
             ItemsGridView itemsGridView = new ItemsGridView(names[i], desc[i], images[i]);

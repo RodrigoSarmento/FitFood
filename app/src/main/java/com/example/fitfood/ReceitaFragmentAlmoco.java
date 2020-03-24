@@ -2,6 +2,7 @@ package com.example.fitfood;
 
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,7 +24,7 @@ public class ReceitaFragmentAlmoco extends Fragment {
 
     // VARIÁVEIS PARA O GRIDVIEW
     int[] images = {R.drawable.batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
-    String[] names = {"Batata Doce", "Brownie de Banana", "Crepioca de Requeijão", "Panqueca de Banana"};
+    String[] names;
     String[] desc = {"batata doce", "brownie", "crepioca", "panqueca"};
     GridView gridView;
     List<ItemsGridView> itemsList = new ArrayList<>();
@@ -38,11 +39,11 @@ public class ReceitaFragmentAlmoco extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        names = getResources().getStringArray(R.array.recipes);
         View view = inflater.inflate(R.layout.fragment_receita_almoco, container, false);
 
         // PARADAS DO GRIDVIEW
         gridView = view.findViewById(R.id.grid_view_receita_almoco);
-
         for (int i = 0; i < names.length; i++) {
             ItemsGridView itemsGridView = new ItemsGridView(names[i], desc[i], images[i]);
             itemsList.add(itemsGridView);

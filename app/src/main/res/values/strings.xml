@@ -9,7 +9,7 @@
     <string name="menu_receita_cafe">Café da manhã</string>
     <string name="menu_receita_lanche">Lanche</string>
     <string name="receita_bar_title">RECEITAS</string>
-
+    <string-array name="recipes"><item>Batata doce</item><item>Brownie de banana</item><item>Crepioca de requeijão</item><item>Panqueca de banana</item></string-array>
     <string name="navigation_drawer_open">Open navigation Drawer</string>
     <string name="navigation_drawer_close">Close navigation Drawer</string>
     <string name="search_view">Search View</string>
