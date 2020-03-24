@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemViewActivityReceita">
+
+    <ImageView
+        android:id="@+id/image_detalhe_receita"
+        android:layout_width="@dimen/image_detalhe_largura"
+        android:layout_height="@dimen/image_detalhe_altura"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top_fragment"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/titulo_detalhe_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_detalhe_receita"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/ingredientes_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo_detalhe_receita"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ingredientes"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/ingredientes_detalhe_receita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ingredientes_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_top_text"
+        android:textSize="@dimen/text_size" />
+
+</RelativeLayout>
