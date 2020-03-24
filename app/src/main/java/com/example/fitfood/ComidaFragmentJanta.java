@@ -41,7 +41,7 @@ public class ComidaFragmentJanta extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         names = getResources().getStringArray(R.array.recipes);
-        View view = inflater.inflate(R.layout.fragment_receita_almoco, container, false);
+        View view = inflater.inflate(R.layout.fragment_comida_janta, container, false);
         //finding grid view
         gridView = view.findViewById(R.id.grid_view_comida_janta);
         //Adding all itens in the gridview list

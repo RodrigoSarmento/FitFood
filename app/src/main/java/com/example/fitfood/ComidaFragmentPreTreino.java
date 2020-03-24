@@ -41,7 +41,7 @@ public class ComidaFragmentPreTreino extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         names = getResources().getStringArray(R.array.recipes);
-        View view = inflater.inflate(R.layout.fragment_receita_almoco, container, false);
+        View view = inflater.inflate(R.layout.fragment_comida_pre_treino, container, false);
         //finding grid view
         gridView = view.findViewById(R.id.grid_view_comida_pre_treino);
         //Adding all itens in the gridview list
@@ -49,8 +49,8 @@ public class ComidaFragmentPreTreino extends Fragment {
             ItemsGridViewComida itemsGridViewComida = new ItemsGridViewComida(names[i], desc[i], ingredientes[i],images_comida[i], images_info[i]);
             itemsList.add(itemsGridViewComida);
         }
-        customAdapterComida = new CustomAdapterComida(itemsList, getContext(), getActivity());
-        gridView.setAdapter(customAdapterComida);
+        //customAdapterComida = new CustomAdapterComida(itemsList, getContext(), getActivity());
+        gridView.setAdapter(new CustomAdapterComida(itemsList, getContext(), getActivity()));
         //Set info button click
 
         return view;
