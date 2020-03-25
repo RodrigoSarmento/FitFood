@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -50,35 +51,42 @@ public class ComidaActivity extends AppCompatActivity implements NavigationView.
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         switch (item.getItemId()) { //Switch case of each topic we created in menu_comida
             case R.id.nav_comida_almoco:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_comida_container,
                         new ComidaFragmentAlmoco()).commit();
                 break;
 
             case R.id.nav_comida_cafe:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_comida_container,
                         new ComidaFragmentCafe()).commit();
                 break;
 
             case R.id.nav_comida_janta:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_comida_container,
                         new ComidaFragmentJanta()).commit();
                 break;
 
             case R.id.nav_comida_lanche:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_comida_container,
                         new ComidaFragmentLanche()).commit();
                 break;
 
             case R.id.nav_comida_pos_treino:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_comida_container,
                         new ComidaFragmentPosTreino()).commit();
                 break;
 
-            case R.id.nav_comida_pre_treino: //If this case is true, we want to open our fragment
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_comida_container,
-                        new ComidaFragmentPreTreino()).commit(); //Name of the fragment Class
+            case R.id.nav_comida_pre_treino:
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_comida_container,
+                        new ComidaFragmentPreTreino()).commit();
                 break;
 
         }
@@ -86,7 +94,10 @@ public class ComidaActivity extends AppCompatActivity implements NavigationView.
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    //Animação no clique do botão
-    private final AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
+    //back animation
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

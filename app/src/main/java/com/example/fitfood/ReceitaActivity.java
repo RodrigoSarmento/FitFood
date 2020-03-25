@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.material.navigation.NavigationView;
 
 public class ReceitaActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -49,35 +51,42 @@ public class ReceitaActivity extends AppCompatActivity implements NavigationView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         switch (item.getItemId()) { //Switch case of each topic we created in menu_receita
             case R.id.nav_receita_almoco:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_receita_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_receita_container,
                         new ReceitaFragmentAlmoco()).commit();
                 break;
 
             case R.id.nav_receita_cafe:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_receita_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_receita_container,
                         new ReceitaFragmentCafe()).commit();
                 break;
 
             case R.id.nav_receita_janta:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_receita_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_receita_container,
                         new ReceitaFragmentJanta()).commit();
                 break;
 
             case R.id.nav_receita_lanche:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_receita_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_receita_container,
                         new ReceitaFragmentLanche()).commit();
                 break;
 
             case R.id.nav_receita_pos_treino:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_receita_container,
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_receita_container,
                         new ReceitaFragmentPosTreino()).commit();
                 break;
 
-            case R.id.nav_receita_pre_treino: //If this case is true, we want to open our fragment
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_receita_container,
-                        new ReceitaFragmentPreTreino()).commit(); //Name of the fragment Class
+            case R.id.nav_receita_pre_treino:
+                transaction.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right);
+                transaction.replace(R.id.fragment_receita_container,
+                        new ReceitaFragmentPreTreino()).commit();
                 break;
 
         }
@@ -95,5 +104,10 @@ public class ReceitaActivity extends AppCompatActivity implements NavigationView
             super.onBackPressed();
         }
     }
-
+    //back animation
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
 }

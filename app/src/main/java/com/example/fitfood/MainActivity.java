@@ -33,12 +33,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //open Receita Activity after press button
         Intent intent = new Intent(this, ReceitaActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     private void openComidaActivity() {
         //open Comida Activity after press button
         Intent intent = new Intent(this, ComidaActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void onClick(View v) {
