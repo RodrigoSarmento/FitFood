@@ -16,7 +16,10 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/margin_top_fragment"
+            android:foregroundGravity="center"
+            android:gravity="center"
             android:text="@string/teste_nome"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/text_size_sub_titulos" />
 
         <ImageView
