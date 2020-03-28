@@ -11,8 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ItemViewActivityReceita extends AppCompatActivity  {
 
     ImageView image;
-    TextView textView;
-    TextView textViewIngredientes;
+    ImageView image_info;
+    TextView nome;
+    TextView ingredientes;
+    TextView modo_de_preparo;
 
     ItemsGridViewReceita itemsGridViewReceita;
 
@@ -21,16 +23,18 @@ public class ItemViewActivityReceita extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detalhe_item_layout_receita);
 
-        image = findViewById(R.id.image_detalhe_receita);
-        textView = findViewById(R.id.titulo_detalhe_receita);
-        textViewIngredientes = findViewById(R.id.ingredientes_detalhe_receita);
+        image = findViewById(R.id.receita_detalhe_image);
+        nome = findViewById(R.id.receita_detalhe_nome);
+        ingredientes = findViewById(R.id.receita_detalhes_ingredientes);
+        modo_de_preparo = findViewById(R.id.receita_detalhe_modo_de_preparo);
         Intent intent = getIntent();
 
         if (intent.getExtras() != null) {
             itemsGridViewReceita = (ItemsGridViewReceita) intent.getSerializableExtra("item");
             image.setImageResource(itemsGridViewReceita.getImage());
-            textView.setText(itemsGridViewReceita.getName());
-            textViewIngredientes.setText(itemsGridViewReceita.getIngredientes());
+            nome.setText(itemsGridViewReceita.getName());
+            ingredientes.setText(itemsGridViewReceita.getIngredientes());
+            modo_de_preparo.setText(itemsGridViewReceita.getModoDePreparo());
         }
     }
 }

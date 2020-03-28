@@ -22,10 +22,12 @@ import java.util.List;
 public class ReceitaFragmentPreTreino extends Fragment {
 
     // VARIÁVEIS PARA O GRIDVIEW
-    int[] images = {R.drawable.batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
+    int[] images = {R.drawable.brownie_banana, R.drawable.receita_pre_treino_shake_proteico, R.drawable.receita_pre_treino_shake_termogenico,
+            R.drawable.receita_pre_treino_panqueca_cacau, R.drawable.receita_pre_treino_mingau_de_aveia_com_banana,
+            R.drawable.receita_pre_treino_crepioca_salgada, R.drawable.receita_pre_treino_panqueca_de_couve, R.drawable.receita_pre_treino_pao_salgado_proteico};
     String[] names;
-    String[] desc = {"batata doce", "brownie", "crepioca", "panqueca"};
-    String[] ingredientes = {"1 batata doce", "pó de chocolate e banana", "requeijao e n sei mais o q", "banana e ovo eu acho, sei n"};
+    String[] ingredientes;
+    String[] modo_de_preparo;
     GridView gridView;
     List<ItemsGridViewReceita> itemsList = new ArrayList<>();
     CustomAdapterReceita customAdapter;
@@ -39,13 +41,16 @@ public class ReceitaFragmentPreTreino extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        names = getResources().getStringArray(R.array.recipes);
+        names = getResources().getStringArray(R.array.receitas_pre_treino_nome);
+        ingredientes = getResources().getStringArray(R.array.receitas_pre_treino_ingredientes);
+        modo_de_preparo = getResources().getStringArray(R.array.receitas_pre_treino_modo_de_preparo);
+
         View view = inflater.inflate(R.layout.fragment_receita_pre_treino, container, false);
         //finding grid view
         gridView = view.findViewById(R.id.grid_view_receita_pre_treino);
         //Adding all itens in the gridview list
         for (int i = 0; i < names.length; i++) {
-            ItemsGridViewReceita itemsGridViewReceita = new ItemsGridViewReceita(names[i], desc[i], ingredientes[i], images[i]);
+            ItemsGridViewReceita itemsGridViewReceita = new ItemsGridViewReceita(names[i], ingredientes[i], modo_de_preparo[i], images[i]);
             itemsList.add(itemsGridViewReceita);
         }
         customAdapter = new CustomAdapterReceita(itemsList, getContext(), getActivity());

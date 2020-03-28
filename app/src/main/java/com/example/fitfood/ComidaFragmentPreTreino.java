@@ -25,7 +25,7 @@ public class ComidaFragmentPreTreino extends Fragment {
     int[] images_comida = {R.drawable.batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
     int[] images_info = {R.drawable.info_comida_batata_doce, R.drawable.brownie_banana, R.drawable.crepioca_requeijao, R.drawable.panqueca_banana};
     String[] names;
-    String[] desc = {"batata doce", "brownie", "crepioca", "panqueca"};
+    String[] modo_de_preparo = {"batata doce", "brownie", "crepioca", "panqueca"};
     String[] ingredientes = {"1 batata doce", "pó de chocolate e banana", "requeijao e n sei mais o q", "banana e ovo eu acho, sei n"};
     GridView gridView;
     List<ItemsGridViewComida> itemsList = new ArrayList<>();
@@ -40,13 +40,13 @@ public class ComidaFragmentPreTreino extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        names = getResources().getStringArray(R.array.recipes);
+        names = getResources().getStringArray(R.array.receitas);
         View view = inflater.inflate(R.layout.fragment_comida_pre_treino, container, false);
         //finding grid view
         gridView = view.findViewById(R.id.grid_view_comida_pre_treino);
         //Adding all itens in the gridview list
         for (int i = 0; i < names.length; i++) {
-            ItemsGridViewComida itemsGridViewComida = new ItemsGridViewComida(names[i], desc[i], ingredientes[i],images_comida[i], images_info[i]);
+            ItemsGridViewComida itemsGridViewComida = new ItemsGridViewComida(names[i], ingredientes[i], modo_de_preparo[i], images_comida[i], images_info[i]);
             itemsList.add(itemsGridViewComida);
         }
         //customAdapterComida = new CustomAdapterComida(itemsList, getContext(), getActivity());

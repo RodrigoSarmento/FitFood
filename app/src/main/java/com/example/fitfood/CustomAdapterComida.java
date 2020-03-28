@@ -47,12 +47,12 @@ public class CustomAdapterComida extends BaseAdapter implements Filterable {
     public View getView(final int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View view = inflater.inflate(R.layout.item_grid, null);
-        ImageView imageView = view.findViewById(R.id.item_grid_image);
-        TextView textView_Name = view.findViewById(R.id.item_grid_text);
+        View view = inflater.inflate(R.layout.item_grid_comida, null);
+        ImageView imageView = view.findViewById(R.id.item_grid_comida_image);
+        TextView nome = view.findViewById(R.id.item_grid_comida_nome);
 
         imageView.setImageResource(itemsGridViewsFilteredComida.get(position).getImageComida());
-        textView_Name.setText(itemsGridViewsFilteredComida.get(position).getName());
+        nome.setText(itemsGridViewsFilteredComida.get(position).getName());
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +80,7 @@ public class CustomAdapterComida extends BaseAdapter implements Filterable {
                     List<ItemsGridViewComida> resultData = new ArrayList<>();
 
                     for(ItemsGridViewComida itemsGridView : itemsGridViewComida){
-                        if(itemsGridView.getName().contains(searchStr) || itemsGridView.getDesc().contains(searchStr)){
+                        if(itemsGridView.getName().contains(searchStr) || itemsGridView.getModoDePreparo().contains(searchStr)){
                             resultData.add(itemsGridView);
                         }
                         filterResults.count = resultData.size();

@@ -5,15 +5,15 @@ import java.io.Serializable;
 public class ItemsGridViewComida implements Serializable {
 
     private String name;
-    private String desc;
     private String ingredientes;
+    private String modo_de_preparo;
     private int image_info;
     private int image_comida;
 
-    public ItemsGridViewComida(String name, String desc, String ingredientes, int image_comida, int image_info) {
+    public ItemsGridViewComida(String name, String ingredientes, String modo_de_preparo, int image_comida, int image_info) {
         this.name = name;
-        this.desc = desc;
         this.ingredientes = ingredientes;
+        this.modo_de_preparo = modo_de_preparo;
         this.image_info = image_info;
         this.image_comida = image_comida;
     }
@@ -26,12 +26,12 @@ public class ItemsGridViewComida implements Serializable {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getModoDePreparo() {
+        return modo_de_preparo;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setModoDePreparo(String modo_de_preparo) {
+        this.modo_de_preparo = modo_de_preparo;
     }
 
     public String getIngredientes() {

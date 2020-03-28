@@ -8,7 +8,6 @@
         android:id="@+id/grid_view_receita_pre_treino"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_top_grid"
         android:horizontalSpacing="@dimen/horizontal_grid_space"
         android:numColumns="2"
         android:verticalSpacing="@dimen/vertical_grid_space" />
