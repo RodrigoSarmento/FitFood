@@ -11,12 +11,19 @@
     <dimen name="main_button_size">@dimen/_170sdp</dimen>
     <dimen name="main_button_text_size">@dimen/_20ssp</dimen>
     <dimen name="margin_info">@dimen/_8sdp</dimen>
+    <dimen name="margin_start">@dimen/_14sdp</dimen>
+    <dimen name="margin_ingredientes">@dimen/_14sdp</dimen>
     <dimen name="margin_top_fragment">@dimen/_40sdp</dimen>
     <dimen name="margin_top_grid">@dimen/_70sdp</dimen>
     <dimen name="margin_top_text_grid">@dimen/_2sdp</dimen>
     <dimen name="margin_top_text">@dimen/_10sdp</dimen>
     <dimen name="margin_button_info">@dimen/_5sdp</dimen>
     <dimen name="text_size">@dimen/_15ssp</dimen>
+    <dimen name="text_size_sub_titulos">@dimen/_22ssp</dimen>
+    <dimen name="text_size_textos">@dimen/_12ssp</dimen>
+    <dimen name="padding">@dimen/_8sdp</dimen>
+
+
 
 
 </resources>

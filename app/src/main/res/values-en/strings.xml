@@ -1,17 +1,46 @@
 <resources>
     <string name="app_name">FitFood</string>
-    <string name="comidas">Food</string>
-    <string name="receitas">Recipes</string>
+    <string name="comidas">Comidas</string>
+    <string name="receitas">Receitas</string>
+    <string name="ingredientes"><b><i>Ingredientes</i></b> </string>
+    <string name="modo_de_preparo"><b><i>Modo de Preparo</i></b></string>
+    <string name="receita_bar_title">RECEITAS</string>
+    <string name="comidas_bar_title">COMIDAS</string>
     <string name="menu_receita_pre_treino">Pré Treino</string>
     <string name="menu_receita_pos_treino">Pós Treino</string>
     <string name="menu_receita_almoco">Almoço</string>
     <string name="menu_receita_janta">Janta</string>
     <string name="menu_receita_cafe">Café da manhã</string>
     <string name="menu_receita_lanche">Lanche</string>
-    <string name="receita_bar_title">RECEITAS</string>
-    <string-array name="recipes"><item>Batata doce</item><item>Brownie de banana</item><item>Crepioca de requeijão</item><item>Panqueca de banana</item></string-array>
+    <string-array name="receitas_pre_treino_nome"><item>Brownie De Banana Especial</item><item>Shake Proteico com Óleo de Coco</item>
+        <item>Shake Termogênico</item><item>Panqueca de Cacau com Pasta de Amendoim</item>
+        <item>Mingau De Aveia Com Banana</item><item>Crepioca Salgada</item>
+        <item>Panqueca de Couve e Espinafre</item><item>Pãozinho Salgado Proteico</item></string-array>
+    <string-array name="receitas_pre_treino_ingredientes">
+        <!-- Brownie de Banana--><item> • 2 bananas maduras médias\n• 2 colheres de sobremesa de cacau em pó\n• 2 colheres de sopa de farinha de aveia\n• 2 colheres de sopa de óleo de coco\n</item>
+        <!-- Shake Proteico Com Óleo de Coco--><item>  • 1 colher de sopa cheias de coco fresco ralado\n• 2 colheres de sopa de whey protein sabor morango\n• 1 xícara de chá de água gelada\n• 2 colheres de sobremesa de óleo de coco\n</item>
+        <!-- Shake Termogenico--><item> • 1 xícara de café\n• 1 colher de sopa de óleo de coco\n• 1 colher de sopa de manteiga ghee\n• 1 colher de café de canela em pó\n• 2 colheres de sopa de whey protein sabor chocolate\n</item>
+        <!-- Panqueca De Cacau amendoim --><item> <b><i>Ingredientes da Panqueca:\n</i></b>• 2 ovos\n• 2 colheres de sopa de aveia em flocos finos\n• 1 colher de sopa de farinha de linhaça dourada\n• 1 colher de sobremesa rasa de cacau em pó puro\n• Canela à gosto
+            \n<b><i>Ingredientes do Recheio:\n</i></b> • 1 colher de sobremesa de whey protein ou proteína vegetal sabor chocolate\n• 1 colher de sopa de pasta de amendoim\n• 1 colher de sobremesa de água\n</item>
+        <!-- Mingau Aveita com Banana--><item> • 2 colheres de sopa cheias de aveia em flocos\n• 1 banana média madura amassada com garfo\n• 100 ml de leite semi desnatado\n• Canela em pó à gosto\n</item>
+        <!-- Crepioca Salgada--><item> • 2 colheres de sopa de goma de tapioca\n• 1 ovo inteiro e 1 clara\n• 1 colher de sobremesa de requeijão light\n</item>
+        <!-- Panqueca de Couve e Espinafre--><item><![CDATA[  • 1 pires de chá de couve manteiga\n• 2 colheres de sopa de farinha de trigo integral\n• 1 xícara café de leite vegetal (coco, castanhas, arroz…)\n• ½ unidade pequena de cenoura\n• 1 ovo\n• 1 fatia média de ricota\n]]></item>
+        <!-- Pãozinho Salgado--><item> • 2 colheres de sopa de farinha de grão de bico\n• 1 ovo\n• 1 colher de sopa de iogurte natural\n• 1 pitada de fermento\n• 1 colher de sopa de óleo de coco\n</item></string-array>
+
+    <string-array name="receitas_pre_treino_modo_de_preparo">
+        <!-- Brownie de Banana--><item>Pré-aqueça o forno a 180ºC. Bata no liquidificador todos os ingredientes até ficar homogêneo e coloque a massa em assadeira untada com óleo de coco. Leve ao forno por aproximadamente 15 minutos, retire e deixe esfriar.</item>
+        <!-- Shake Proteico Com Óleo de Coco--> <item>Bater bem os ingredientes em um liquidificador com exceção do coco ralado. Despejar o preparado em um copo e salpicar o coco ralado por cima.</item>
+        <!-- Shake Termogenico--> <item>Bata todos os ingredientes no liquidificador e servir.</item>
+        <!-- Panqueca De Cacau amendoim--><item><b><i>Panqueca:\n</i></b>Bata todos os ingredientes com o auxílio de um garfo e leve à frigideira antiaderente untada com óleo de coco e deixe dourar dos dois lados
+            \n<b><i>Recheio:\n</i></b>Misture a água com a pasta de amendoim e leve ao micro-ondas por 40 segundos. Adicione a proteína em pó e misture novamente. Adicione na panqueca e dobre.</item>
+        <!-- Mingau Aveita com Banana--> <item>Leve o leite, a banana e a aveia ao fogo médio e vá mexendo até adquirir consistência. Salpique canela depois de pronto.</item>
+        <!-- Crepioca Salgada--> <item>Misturar o ovo, a goma de tapioca e o requeijão e mexer bem com a ajuda de um fuet ou garfo. Temperar à gosto e levar à frigideira antiaderente até dourar os dois lados.</item>
+        <!-- Panqueca de Couve e Espinafre--><item><b><i>Massa:\n</i></b>Bater por 2 minutos no liquidificador a couve previamente higienizada e picada com a farinha de trigo integral, ½ xícara do leite vegetal, o ovo e o sal. Leve a massa à frigideira untada com azeite de oliva aos poucos e deixe dourar bem dos dois lados. Repita o processo até acabar a massa.
+            \n<b><i>Recheio:\n</i></b>Coloque a cenoura ralada grossa para cozinhar no restante do leite em fogo baixo por uns 15 minutos ou até a cenoura ficar macia. Espere esfriar, adicione a ricota e a salsinha, tempere com sal. Distribua o recheio entre as massas, enrole e arrume em um refratário.</item>
+        <!-- Pãozinho Salgado--> <item>Bater todos os ingredientes com um garfo e levar ao micro-ondas por 3 minutos. Retirar do recipiente e levar à frigideira antiaderente até dourar os dois lados. Se preferir você pode passar 1 colher de sopa de cottage depois de pronto.</item></string-array>
+    <string-array name="receitas"><item>Batata doce</item><item>Brownie de banana</item><item>Crepioca de requeijão</item><item>Panqueca de banana</item></string-array>
     <string name="navigation_drawer_open">Open navigation Drawer</string>
     <string name="navigation_drawer_close">Close navigation Drawer</string>
     <string name="search_view">Search View</string>
-    <string name="ingredientes">INGREDIENTES</string>
+    <string name="teste">TESTE DE TEXTO PARA O LAYOUT</string>
 </resources>

@@ -2,16 +2,32 @@
     <string name="app_name">FitFood</string>
     <string name="comidas">Comidas</string>
     <string name="receitas">Receitas</string>
+    <string name="ingredientes"><b><i>Ingredientes</i></b> </string>
+    <string name="modo_de_preparo"><b><i>Modo de Preparo</i></b></string>
+    <string name="receita_bar_title">RECEITAS</string>
+    <string name="comidas_bar_title">COMIDAS</string>
     <string name="menu_receita_pre_treino">Pré Treino</string>
     <string name="menu_receita_pos_treino">Pós Treino</string>
     <string name="menu_receita_almoco">Almoço</string>
     <string name="menu_receita_janta">Janta</string>
     <string name="menu_receita_cafe">Café da manhã</string>
     <string name="menu_receita_lanche">Lanche</string>
-    <string name="receita_bar_title">RECEITAS</string>
-    <string-array name="recipes"><item>Batata doce</item><item>Brownie de banana</item><item>Crepioca de requeijão</item><item>Panqueca de banana</item></string-array>
+    <string-array name="receitas_pre_treino_nome"><item>Brownie De Banana Especial</item><item>Shake Proteico com Óleo de Coco</item>
+        <item>Shake Termogênico</item><item>Panqueca de Cacau com Pasta de Amendoim</item>
+        <item>Mingau De Aveia Com Banana</item><item>Crepioca Salgada</item>
+        <item>Panqueca de Couve e Espinafre</item><item>Pãozinho Salgado Proteico</item></string-array>
+    <string-array name="receitas_pre_treino_ingredientes"><item>Brownie De Banana Especial</item><item>Shake Proteico com Óleo de Coco</item>
+        <item>Shake Termogênico</item><item>Panqueca de Cacau com Pasta de Amendoim</item>
+        <item>Mingau De Aveia Com Banana</item><item>Crepioca Salgada</item>
+        <item>Panqueca de Couve e Espinafre</item><item>Pãozinho Salgado Proteico</item></string-array>
+    <string-array name="receitas_pre_treino_modo_de_preparo"><item>Brownie De Banana Especial</item><item>Shake Proteico com Óleo de Coco</item>
+        <item>Shake Termogênico</item><item>Panqueca de Cacau com Pasta de Amendoim</item>
+        <item>Mingau De Aveia Com Banana</item><item>Crepioca Salgada</item>
+        <item>Panqueca de Couve e Espinafre</item><item>Pãozinho Salgado Proteico</item></string-array>
+    <string-array name="receitas"><item>Batata doce</item><item>Brownie de banana</item><item>Crepioca de requeijão</item><item>Panqueca de banana</item></string-array>
     <string name="navigation_drawer_open">Open navigation Drawer</string>
     <string name="navigation_drawer_close">Close navigation Drawer</string>
     <string name="search_view">Search View</string>
-    <string name="ingredientes">INGREDIENTES</string>
+    <string name="teste_nome">Nome</string>
+    <string name="teste">TESTE DE TEXTO PARA O LAYOUT</string>
 </resources>

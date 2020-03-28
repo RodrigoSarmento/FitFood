@@ -16,10 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ItemViewActivityComida extends AppCompatActivity implements View.OnClickListener {
     private final AlphaAnimation buttonClick = new AlphaAnimation(1F, 0.8F);
 
-    ImageView image_comida;
+    ImageView image;
     ImageView image_info;
-    TextView textView;
-    TextView textViewIngredientes;
+    TextView nome;
+    TextView ingredientes;
+    TextView modo_de_preparo;
     Button button_info;
 
     ItemsGridViewComida itemsGridViewComida;
@@ -29,18 +30,20 @@ public class ItemViewActivityComida extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detalhe_item_layout_comida);
 
-        image_comida = findViewById(R.id.image_detalhe_comida);
-        textView = findViewById(R.id.titulo_detalhe_comida);
-        textViewIngredientes = findViewById(R.id.ingredientes_detalhe_comida);
+        image = findViewById(R.id.comida_detalhe_image);
+        nome = findViewById(R.id.comida_detalhe_nome);
+        ingredientes = findViewById(R.id.comida_detalhes_ingredientes);
+        modo_de_preparo = findViewById(R.id.comida_detalhe_modo_de_preparo);
         button_info = findViewById(R.id.button_info_comida);
         button_info.setOnClickListener(this);
         Intent intent = getIntent();
 
         if (intent.getExtras() != null) {
             itemsGridViewComida = (ItemsGridViewComida) intent.getSerializableExtra("item");
-            image_comida.setImageResource(itemsGridViewComida.getImageComida());
-            textView.setText(itemsGridViewComida.getName());
-            textViewIngredientes.setText(itemsGridViewComida.getIngredientes());
+            image.setImageResource(itemsGridViewComida.getImageComida());
+            nome.setText(itemsGridViewComida.getName());
+            ingredientes.setText(itemsGridViewComida.getIngredientes());
+            modo_de_preparo.setText(itemsGridViewComida.getModoDePreparo());
         }
     }
 
